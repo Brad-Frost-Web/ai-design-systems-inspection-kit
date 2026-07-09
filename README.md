@@ -2,13 +2,11 @@
 
 **A set of AI agent skills that evaluate and improve the quality of your design system.**
 
-This kit walks your design system through a 10-station, multi-point inspection — coverage, best practices, accessibility, naming, testing, synchronization, governance, feedback, and AI readiness — and hands back a red/yellow/green inspection report plus a prioritized work order.
-
-It's adapted from Chapter 3 of **[AI & Design Systems](https://aianddesign.systems/)**, the course by Brad Frost, Ian Frost, and TJ Pitre. The course teaches the full method — why each station matters, what good looks like, and live demos of using AI to fix what the inspection finds. This repo is the runnable version. MIT licensed.
+This kit walks your design system through a 10-station, multi-point inspection as detailed in the **[AI & Design Systems](https://aianddesign.systems/)**, the course by Brad Frost, Ian Frost, and TJ Pitre. The inspection hands back a graded inspection report plus a prioritized work order for addressing your design system's check engine light.
 
 ## Quick start
 
-Clone into your Claude Code skills folder. The folder name becomes the command, so keep it `ds-inspection`:
+Clone this repository into your Claude Code skills folder. The folder name becomes the command, so keep it `ds-inspection`:
 
 ```bash
 git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git ~/.claude/skills/ds-inspection
@@ -81,3 +79,8 @@ Each station scores 0–10 (red 0–3, yellow 4–7, green 8–10), summing to a
 ## Other skills worth knowing
 
 There are other great skills out there for evaluating the health of your design system and code, like [Design System Ops](https://designsystemops.com/) by Murphy Trueman, [Google's Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance), and others. Several station files point to Design System Ops skills as good follow-up tools for the problems the inspection surfaces.
+
+## AI & Design Systems
+These skills are helpful, but we'd love it if you joined our [AI & Design Systems](https://aianddesign.systems/) course and community to watch detailed walk-throughs, learn core concepts for wielding AI & Design Systems together, and join a vibrant community of AI & Design Systems practitioners. 
+
+MIT licensed.
