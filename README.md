@@ -20,6 +20,14 @@ Restart Claude Code, open it inside the design system you want to inspect, and r
 
 The agent interviews you about your system, runs the stations, and writes a graded report and work order to a `ds-inspection/` folder in your project.
 
+**Don't want the full inspection?** Run a single station:
+
+```
+/ds-inspection run station 1
+```
+
+Any station works this way — `/ds-inspection run station 3`, or plain language like "inspect our accessibility." The agent asks only the intake questions that station needs, runs it, and writes that station's record to your report.
+
 **Other ways to run it:**
 
 - **One repo / whole team:** clone into the project instead — `.claude/skills/ds-inspection` — delete its `.git` folder, and commit it.
@@ -48,6 +56,12 @@ This kit is plain markdown. There is no required tool, plugin, or vendor. Every 
 4. **Interview** — no artifacts at all? The station asks you the questions and records your answers.
 
 Every finding is tagged **[verified]** (the agent saw it directly) or **[reported]** (you described it). Both count; only one is proof. A report full of `[reported]` findings is your cue to get the agent better access next time.
+
+## Your design system is more than this repo
+
+A design system spans more than the codebase you run this in: a Figma library, a documentation site, reference websites, and the products that consume it all. The kit handles this through **intake**: on first run, the agent interviews you about what makes up your system and tests what it can actually reach, then records it all in `ds-inspection/GARAGE.md`.
+
+`GARAGE.md` is plain markdown and it's yours to edit. Add Figma file URLs, docs and reference site links, product repo paths, support channels — anything the inspection should consider. Every station reads it before gathering evidence, and the more of it your agent can actually reach (via MCP servers, file access, or fetchable URLs), the more findings come back `[verified]` instead of `[reported]`. Commit it with your project and future runs skip the interview; update it whenever your system changes.
 
 ## The three ways to run it
 
