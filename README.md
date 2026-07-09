@@ -1,10 +1,36 @@
 # Design System Multi-Point Inspection Kit
 
-**Pop the hood. Roll up your sleeves. Figure out what's causing that check engine light.**
+**A set of AI agent skills that evaluate and improve the quality of your design system.**
 
-This kit turns the AI & Design Systems course's multi-point inspection (Chapter 3) into a real, runnable inspection you can point at *your* design system. An AI agent walks your system through 10 inspection stations — the same ones from the course — and hands you back a red/yellow/green inspection report plus a prioritized work order.
+This kit walks your design system through a 10-station, multi-point inspection — coverage, best practices, accessibility, naming, testing, synchronization, governance, feedback, and AI readiness — and hands back a red/yellow/green inspection report plus a prioritized work order.
 
-It checks the five qualities of a healthy, AI-ready design system:
+It's adapted from Chapter 3 of **[AI & Design Systems](https://aianddesign.systems/)**, the course by Brad Frost, Ian Frost, and TJ Pitre. The course teaches the full method — why each station matters, what good looks like, and live demos of using AI to fix what the inspection finds. This repo is the runnable version. MIT licensed.
+
+## Quick start
+
+Clone into your Claude Code skills folder. The folder name becomes the command, so keep it `ds-inspection`:
+
+```bash
+git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git ~/.claude/skills/ds-inspection
+```
+
+Restart Claude Code, open it inside the design system you want to inspect, and run:
+
+```
+/ds-inspection
+```
+
+The agent interviews you about your system, runs the stations, and writes a graded report and work order to a `ds-inspection/` folder in your project.
+
+**Other ways to run it:**
+
+- **One repo / whole team:** clone into the project instead — `.claude/skills/ds-inspection` — delete its `.git` folder, and commit it.
+- **Cursor / Windsurf / other coding agents:** clone into your design system project and point the agent at `SKILL.md`.
+- **Claude Cowork / any chat:** drag in the folder (or just `SKILL.md` plus the stations you need) and say "Run the design system multi-point inspection."
+
+## What it checks
+
+The 10 stations cover the five qualities of a healthy, AI-ready design system:
 
 | Quality | Question | Stations |
 |---|---|---|
@@ -25,35 +51,7 @@ This kit is plain markdown. There is no required tool, plugin, or vendor. Every 
 
 Every finding is tagged **[verified]** (the agent saw it directly) or **[reported]** (you described it). Both count; only one is proof. A report full of `[reported]` findings is your cue to get the agent better access next time.
 
-## Quick start
-
-**Claude Code — install once, use in every project.** Clone into your personal skills folder, using `ds-inspection` as the folder name — that name becomes the `/ds-inspection` command:
-
-```bash
-git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git ~/.claude/skills/ds-inspection
-```
-
-Restart Claude Code (so it picks up the new skill), open it inside the design system you want to inspect, and either type `/ds-inspection` or just say:
-
-> Run the design system multi-point inspection. Start with intake.
-
-**Claude Code — for one project / your whole team.** Clone into the project's skills folder instead, and commit it so everyone who works in that repo gets it:
-
-```bash
-cd your-design-system
-git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git .claude/skills/ds-inspection
-rm -rf .claude/skills/ds-inspection/.git   # commit as plain files, not a nested repo
-```
-
-> **Keep the name `ds-inspection`.** The folder you clone into is the command people type and how the skill is referenced everywhere — the course videos, this README, and the [resources site](https://aianddesign.systems/tools/inspection-kit/) all assume `ds-inspection`. Name it something else and your command won't match the instructions.
-
-**Cursor / Windsurf / other coding agents:** clone the repo into your design system project and point the agent at `SKILL.md`.
-
-**Claude Cowork / desktop chat:** drag the folder (or just `SKILL.md` + the station files you need) into the conversation and say the same thing.
-
-**Any plain LLM chat:** paste `intake/GARAGE-INTAKE.md` first, answer its questions, then paste any station file to run that station.
-
-### The three ways to run it
+## The three ways to run it
 
 | Mode | Say | What happens |
 |---|---|---|
@@ -80,12 +78,6 @@ Keep these in version control. The dated reports are how you see drift over time
 
 Each station scores 0–10 (red 0–3, yellow 4–7, green 8–10), summing to a /100. Fix the reds first, schedule the yellows, count your greens, and re-run on a cadence. Scale the frame to your team — a two-person system and a 200-person platform hit different bars for green.
 
-## Relationship to Design System Ops
+## Other skills worth knowing
 
-[Design System Ops](https://designsystemops.com/) by Murphy Trueman is an excellent, MIT-licensed Claude Code skill pack for design system practitioners — 40 deep operational skills (token audits, deprecation plans, codemods, stakeholder briefs). This kit is not a replacement for it, and deliberately doesn't reinvent it.
-
-The difference in shape: Design System Ops is a **toolbox** — you pick the right skill for the job. This kit is a **diagnostic frame** — one repeatable inspection, in the course's five-qualities/ten-stations language, that tells you *where* your check engine light is coming from. Several stations point to Design System Ops skills as great "turn off the light" follow-ups. Use both.
-
-## Provenance
-
-Built for the [AI & Design Systems course](https://aidesignsystems.com) by Brad Frost, Ian Frost, and TJ Pitre. The station definitions mirror the course's Chapter 3 inspection checklist. MIT licensed — take it, adapt it, run it on your own garage.
+There are other great skills out there for evaluating the health of your design system and code, like [Design System Ops](https://designsystemops.com/) by Murphy Trueman, [Google's Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance), and others. Several station files point to Design System Ops skills as good follow-up tools for the problems the inspection surfaces.
