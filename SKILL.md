@@ -1,5 +1,5 @@
 ---
-name: ds-multi-point-inspection
+name: ds-inspection
 description: Run a design system multi-point inspection — assess a design system across 10 stations (coverage, best practices, accessibility, shared language, testing, orchestration, governance, feedback, machine-readable docs, agent access) and produce a red/yellow/green inspection report with a prioritized work order. Use when the user asks to inspect, assess, audit, or health-check their design system, run the inspection or a specific station, or asks "why is my design system's check engine light on?"
 ---
 

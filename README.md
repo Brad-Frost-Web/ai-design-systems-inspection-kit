@@ -27,15 +27,27 @@ Every finding is tagged **[verified]** (the agent saw it directly) or **[reporte
 
 ## Quick start
 
-**Claude Code / Cursor / Windsurf / any coding agent:** clone this repo into your design system project (or into `~/.claude/skills/` for Claude Code):
+**Claude Code — install once, use in every project.** Clone into your personal skills folder, using `ds-inspection` as the folder name — that name becomes the `/ds-inspection` command:
 
 ```bash
-git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git
+git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git ~/.claude/skills/ds-inspection
 ```
 
-Then open your agent in the repo and say:
+Restart Claude Code (so it picks up the new skill), open it inside the design system you want to inspect, and either type `/ds-inspection` or just say:
 
 > Run the design system multi-point inspection. Start with intake.
+
+**Claude Code — for one project / your whole team.** Clone into the project's skills folder instead, and commit it so everyone who works in that repo gets it:
+
+```bash
+cd your-design-system
+git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git .claude/skills/ds-inspection
+rm -rf .claude/skills/ds-inspection/.git   # commit as plain files, not a nested repo
+```
+
+> **Keep the name `ds-inspection`.** The folder you clone into is the command people type and how the skill is referenced everywhere — the course videos, this README, and the [resources site](https://aianddesign.systems/tools/inspection-kit/) all assume `ds-inspection`. Name it something else and your command won't match the instructions.
+
+**Cursor / Windsurf / other coding agents:** clone the repo into your design system project and point the agent at `SKILL.md`.
 
 **Claude Cowork / desktop chat:** drag the folder (or just `SKILL.md` + the station files you need) into the conversation and say the same thing.
 
