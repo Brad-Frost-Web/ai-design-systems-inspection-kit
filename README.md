@@ -6,19 +6,21 @@ This kit walks your design system through a 10-station, multi-point inspection a
 
 ## Quick start
 
-Clone this repository into your Claude Code skills folder. The folder name becomes the command, so keep it `ds-inspection`:
+Install with the [skills CLI](https://github.com/vercel-labs/skills), which works across agents — Claude Code, Cursor, Codex, Copilot, Windsurf, Gemini CLI, and more. From your design system project:
 
 ```bash
-git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git ~/.claude/skills/ds-inspection
+npx skills add Brad-Frost-Web/ai-design-systems-inspection-kit
 ```
 
-Restart Claude Code, open it inside the design system you want to inspect, and run:
+It detects which agents you use and installs the `ds-inspection` skill where each one looks for it. Add `-g` to install user-level (all projects) instead of just this project.
+
+Then open your agent inside the design system you want to inspect and run:
 
 ```
 /ds-inspection
 ```
 
-The agent interviews you about your system, runs the stations, and writes a graded report and work order to a `ds-inspection/` folder in your project.
+(Or say "Run the design system multi-point inspection" — any agent that reads the skill can follow it.) The agent interviews you about your system, runs the stations, and writes a graded report and work order to a `ds-inspection/` folder in your project.
 
 **Don't want the full inspection?** Run a single station:
 
@@ -28,11 +30,18 @@ The agent interviews you about your system, runs the stations, and writes a grad
 
 Any station works this way — `/ds-inspection run station 3`, or plain language like "inspect our accessibility." The agent asks only the intake questions that station needs, runs it, and writes that station's record to your report.
 
-**Other ways to run it:**
+**Other ways to install and run:**
 
-- **One repo / whole team:** clone into the project instead — `.claude/skills/ds-inspection` — delete its `.git` folder, and commit it.
-- **Cursor / Windsurf / other coding agents:** clone into your design system project and point the agent at `SKILL.md`.
-- **Claude Cowork / any chat:** drag in the folder (or just `SKILL.md` plus the stations you need) and say "Run the design system multi-point inspection."
+- **Manual install (no npx):** clone this repo and copy the inner `ds-inspection/` folder into your agent's skills directory — e.g. `~/.claude/skills/ds-inspection` for Claude Code:
+  ```bash
+  git clone https://github.com/Brad-Frost-Web/ai-design-systems-inspection-kit.git
+  cp -R ai-design-systems-inspection-kit/ds-inspection ~/.claude/skills/ds-inspection
+  ```
+  The folder name becomes the command, so keep it `ds-inspection`.
+- **Whole team:** run `npx skills add` in the project (without `-g`) and commit the installed skill so everyone who works in that repo gets it.
+- **Claude Cowork / any chat:** drag in the `ds-inspection` folder (or just `SKILL.md` plus the stations you need) and say "Run the design system multi-point inspection."
+
+> **Installed before the npx layout (July 2026)?** The skill files moved into a `ds-inspection/` subfolder of this repo, so a `git pull` inside an old clone at `~/.claude/skills/ds-inspection` will break it. Delete that folder and reinstall with either method above.
 
 ## What it checks
 
