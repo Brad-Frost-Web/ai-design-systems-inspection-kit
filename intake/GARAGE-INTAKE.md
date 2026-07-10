@@ -4,6 +4,8 @@ Before any inspection, check the vehicle in. This step builds `ds-inspection/GAR
 
 **Agent:** work through the sections below conversationally — a few questions at a time, not a wall of forms. Wherever you have live access (design-tool bridge, repo, docs URL), *discover* the answer yourself and confirm it instead of asking. Aim for 10–15 minutes, not an interrogation. Then write `GARAGE.md` using the template at the bottom and read it back for confirmation.
 
+**First question, before anything else — the design library.** You're almost certainly running inside a code repo, which makes it easy to forget that most design systems have a Figma (or other design-tool) library too. Open with: *"Do you have a Figma or other design library for this system? And is a Figma MCP or bridge plugin connected so I can read it live?"* Then check your own available tools for Figma/design-tool tools — users often have a bridge running that you won't notice unless you look — and if you find one, make a test call to confirm you can see their actual library. Record the outcome either way. Skipping this is the #1 intake failure: it silently downgrades every design-side finding to `[reported]` and the user finds out at the end of the report.
+
 ## 1. The vehicle
 
 - Design system name, and the organization/product landscape it serves
