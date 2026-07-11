@@ -66,6 +66,14 @@ This kit is plain markdown. There is no required tool, plugin, or vendor. Every 
 
 Every finding is tagged **[verified]** (the agent saw it directly) or **[reported]** (you described it). Both count; only one is proof. A report full of `[reported]` findings is your cue to get the agent better access next time.
 
+**Optional power-up:** connect [design-systems-mcp](https://github.com/southleft/design-systems-mcp) by Southleft — a free, hosted knowledge server covering Material, Fluent, Carbon, Polaris, Spectrum, Primer, Lightning, and Atlassian, plus DTCG and WCAG standards. Station 1 uses it to benchmark your component coverage against the industry (it's how we found the popover, menu, tree-view, and loading-state gaps in our own system); other stations use it for standards lookups. No install — it's a remote endpoint:
+
+```bash
+claude mcp add --transport http design-systems https://design-systems-mcp.southleft.com/mcp
+```
+
+(Other agents: add `https://design-systems-mcp.southleft.com/mcp` as a remote MCP server in your agent's config.) Without it, the agent benchmarks from its own knowledge and says so.
+
 ## Your design system is more than this repo
 
 A design system spans more than the codebase you run this in: a Figma library, a documentation site, reference websites, and the products that consume it all. The kit handles this through **intake**: on first run, the agent interviews you about what makes up your system and tests what it can actually reach, then records it all in `ds-inspection/GARAGE.md`.
