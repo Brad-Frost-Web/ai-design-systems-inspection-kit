@@ -31,7 +31,7 @@ _Vehicle profile: `product-inspection/GARAGE.md` (checked in <date>)_
 |  3 | Responsive                    | Adaptive   |  🟢   |       8/10 |
 |  4 | States & resilience           | Resilient  |  🟡   |       5/10 |
 |  5 | Performance                   | Fast       |  🟡   |       7/10 |
-|  6 | Content & information arch.    | Clear      |  🟢   |       8/10 |
+|  6 | Content & IA                   | Clear      |  🟢   |       8/10 |
 |  7 | Task & flow success           | Effective  |  🟢   |       8/10 |
 |  8 | Visual design                 | Refined    |  🟡   |       7/10 |
 |  9 | Security & privacy            | Secure     |  🔴   |       3/10 |
