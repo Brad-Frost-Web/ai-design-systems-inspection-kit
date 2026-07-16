@@ -1,11 +1,11 @@
 ---
 station: 10
-name: Instrumentation & feedback
+name: Measurement
 quality: Measured (quality 10 of 10)
 question: Can the team actually see how the product performs in the wild — errors, usage, drop-off, and user feedback — or is it flying blind after ship?
 ---
 
-# Station 10 — Instrumentation & feedback
+# Station 10 — Measurement
 
 **Quality: Measured.** A product that ships without instrumentation is a car with no dashboard — you can't tell it's overheating until it dies on the shoulder. This final station checks whether the team can *observe* the running product: are errors captured and surfaced, is meaningful usage tracked, can they see where users drop off, and is there a path for user feedback that closes the loop back into the work. It's the station that keeps every other station honest between inspections — instrumentation is how the check-engine light gets wired up in the first place.
 
@@ -53,7 +53,7 @@ question: Can the team actually see how the product performs in the wild — err
 ## Station record
 
 ```markdown
-### Station 10 — Instrumentation & feedback: <RED|YELLOW|GREEN> (<n>/10)
+### Station 10 — Measurement: <RED|YELLOW|GREEN> (<n>/10)
 - Error monitoring: <tool/none> · Analytics depth: <pageviews/events/funnels> · RUM: <yes/no> · Feedback path: <what> · Loop-closing: <how>
 - Evidence level: <live / dashboard / code / interview, per check>
 - Findings:

@@ -1,11 +1,11 @@
 ---
 station: 3
-name: Responsive & cross-device
+name: Responsive
 quality: Adaptive (quality 3 of 10)
 question: Does the product work across the breakpoints, input modes, and devices its audience actually uses — not just the width it was designed at?
 ---
 
-# Station 3 — Responsive & cross-device
+# Station 3 — Responsive
 
 **Quality: Adaptive.** Designs are drawn at a comfortable desktop width; users show up on phones, tablets, split-screen windows, zoomed-in browsers, and touchscreens. This station checks whether the product holds its shape and stays operable across that real range — reflow without horizontal scroll, tap targets big enough for thumbs, content legible at 200% zoom, no functionality that only works with a hover.
 
@@ -18,7 +18,7 @@ question: Does the product work across the breakpoints, input modes, and devices
 | Horizontal overflow | Rendered layout at narrow widths — any sideways scroll? | Screenshots · interview |
 | Touch ergonomics | Tap-target sizes, hover-only affordances | Interaction on a touch device · interview |
 | Zoom / reflow | Browser at 200% zoom; content reflows, nothing clipped | Screenshots · interview |
-| Audience device mix | Analytics: actual viewport/device distribution | Interview: "what do your users are on?" |
+| Audience device mix | Analytics: actual viewport/device distribution | Interview: "what are your users on?" |
 
 ## Inspection procedure
 
@@ -53,7 +53,7 @@ question: Does the product work across the breakpoints, input modes, and devices
 ## Station record
 
 ```markdown
-### Station 3 — Responsive & cross-device: <RED|YELLOW|GREEN> (<n>/10)
+### Station 3 — Responsive: <RED|YELLOW|GREEN> (<n>/10)
 - Widths checked: <list> · Real device: <yes/no, which> · Audience mix: <from analytics/interview>
 - Evidence level: <live / screenshot / interview, per check>
 - Findings:

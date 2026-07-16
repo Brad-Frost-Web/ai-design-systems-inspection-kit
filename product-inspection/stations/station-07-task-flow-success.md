@@ -1,19 +1,21 @@
 ---
 station: 7
-name: Task success & core flows
+name: Task & flow success
 quality: Effective (quality 7 of 10)
 question: Can a real user actually complete the product's core jobs, end to end, without getting stuck, confused, or dropped?
 ---
 
-# Station 7 — Task success & core flows
+# Station 7 — Task & flow success
 
-**Quality: Effective.** Every prior station inspects an attribute — fidelity, a11y, speed, clarity. This one inspects the *whole*: put yourself in the user's shoes and try to accomplish what they came to do, start to finish. A product can pass every component-level check and still fail here because the *flow* is broken — a dead end, a missing step, a confirmation that never comes, a path that assumes knowledge the user doesn't have. This is the station that most resembles a lightweight usability test.
+**Quality: Effective.** Every prior station inspects an attribute — adoption, a11y, speed, clarity. This one inspects the *whole*: put yourself in the user's shoes and try to accomplish what they came to do, start to finish. A product can pass every component-level check and still fail here because the *flow* is broken — a dead end, a missing step, a confirmation that never comes, a path that assumes knowledge the user doesn't have. This is the station that most resembles a lightweight usability test, and it leans hardest on [NN/g's usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as its judgment vocabulary — "user control and freedom," "error prevention," "flexibility and efficiency of use." Cite the heuristic by name when a finding is judgment-based.
+
+**Calibrate against the product's own intent.** The core jobs come from `GARAGE.md` → "Intent & ideal" — the team's stated purpose, not your inference. Score the product against what *it* says it exists to do; where the shipped flow diverges from the stated goal, that's a finding even if the flow technically completes.
 
 ## Evidence to gather
 
 | What to look at | Best source | Fallbacks |
 |---|---|---|
-| The core jobs | Interview + GARAGE profile: what are users here to do? | Product docs · your own inference |
+| The core jobs | GARAGE profile ("Intent & ideal") + interview: what are users here to do? | Product docs · your own inference |
 | Flow walkthrough | Live instance: complete each core job end to end, as a user | Screen recording · interview |
 | First-run experience | Live instance from a fresh/empty account | Screenshots · interview |
 | Drop-off points | Analytics/funnels if reachable | Interview: "where do people get stuck?" |
@@ -55,7 +57,7 @@ question: Can a real user actually complete the product's core jobs, end to end,
 ## Station record
 
 ```markdown
-### Station 7 — Task success & core flows: <RED|YELLOW|GREEN> (<n>/10)
+### Station 7 — Task & flow success: <RED|YELLOW|GREEN> (<n>/10)
 - Core jobs tested: <list> · Completed end-to-end: <n/n> · Worst friction: <where>
 - Evidence level: <live / recording / analytics / interview, per job>
 - Findings:

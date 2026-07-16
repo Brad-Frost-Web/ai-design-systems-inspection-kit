@@ -1,4 +1,4 @@
-# Work Order — <System Name>
+# Work Order — <Product Name>
 
 _From inspection: `reports/<date>-inspection.md` · Written: <date>_
 

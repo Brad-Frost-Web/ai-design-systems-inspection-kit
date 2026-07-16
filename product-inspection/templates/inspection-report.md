@@ -26,16 +26,16 @@ _Vehicle profile: `product-inspection/GARAGE.md` (checked in <date>)_
 
 |  # | Station                       | Quality    | Light |      Score |
 |---:|:------------------------------|:-----------|:-----:|-----------:|
-|  1 | Design-system fidelity        | Faithful   |  🟡   |       6/10 |
-|  2 | Accessibility as-shipped      | Accessible |  🟡   |       6/10 |
-|  3 | Responsive & cross-device     | Adaptive   |  🟢   |       8/10 |
-|  4 | Interaction & state coverage  | Complete   |  🟡   |       5/10 |
-|  5 | Performance as delivered      | Fast       |  🟡   |       7/10 |
+|  1 | Design system adoption        | Adopted    |  🟡   |       6/10 |
+|  2 | Accessibility                 | Accessible |  🟡   |       6/10 |
+|  3 | Responsive                    | Adaptive   |  🟢   |       8/10 |
+|  4 | States & resilience           | Resilient  |  🟡   |       5/10 |
+|  5 | Performance                   | Fast       |  🟡   |       7/10 |
 |  6 | Content & information arch.    | Clear      |  🟢   |       8/10 |
-|  7 | Task success & core flows     | Effective  |  🟢   |       8/10 |
-|  8 | Visual craft & polish         | Polished   |  🟡   |       7/10 |
-|  9 | Resilience & error handling   | Resilient  |  🔴   |       3/10 |
-| 10 | Instrumentation & feedback    | Measured   |  🟡   |       5/10 |
+|  7 | Task & flow success           | Effective  |  🟢   |       8/10 |
+|  8 | Visual design                 | Refined    |  🟡   |       7/10 |
+|  9 | Security & privacy            | Secure     |  🔴   |       3/10 |
+| 10 | Measurement                   | Measured   |  🟡   |       5/10 |
 |    | **Overall**                   |            |       | **63/100** |
 
 **Lights:** 🟢 <n> green · 🟡 <n> yellow · 🔴 <n> red · <n> not inspected
@@ -59,5 +59,5 @@ _Vehicle profile: `product-inspection/GARAGE.md` (checked in <date>)_
 ## Next service
 
 - Work order: `product-inspection/work-orders/<date>-work-order.md`
-- Recommended cadence: deep inspection <each release / quarterly>; everyday checks to wire into CI: <a11y, performance, fidelity lint>
+- Recommended cadence: deep inspection <each release / quarterly>; everyday checks to wire into CI: <a11y, performance, adoption lint, dependency audit>
 - Re-inspect by: <date>

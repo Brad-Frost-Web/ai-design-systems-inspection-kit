@@ -1,11 +1,11 @@
 ---
 station: 2
-name: Accessibility as-shipped
+name: Accessibility
 quality: Accessible (quality 2 of 10)
 question: On the real running DOM — keyboard, focus, ARIA, contrast, semantics — does the product hold up where actual users are, not just where the design system promised it would?
 ---
 
-# Station 2 — Accessibility as-shipped
+# Station 2 — Accessibility
 
 **Quality: Accessible.** A design system can ship perfectly accessible components and a product can still be unusable — because accessibility lives in *composition* and *content*: reading order, focus management across route changes, form labels wired to the right inputs, live-region announcements, contrast against the actual backgrounds in play. This station checks the product as a screen-reader and keyboard user meet it, not as the component library intends. If a paired `ds-inspection` graded the system's a11y green, that's the floor — this asks whether the product kept it.
 
@@ -22,7 +22,7 @@ question: On the real running DOM — keyboard, focus, ARIA, contrast, semantics
 
 ## Inspection procedure
 
-1. **Run an automated pass on real routes.** axe or Lighthouse against 3–5 representative pages (not just the homepage). Automated tools catch ~30–40% of issues — treat a clean pass as necessary, not sufficient.
+1. **Run an automated pass on real routes.** Reference tools: axe-core, [Lighthouse CLI](https://github.com/GoogleChrome/lighthouse), or pa11y — whichever is available (or equivalent; name the tool + version in the finding). Run against 3–5 representative pages, not just the homepage. Automated tools catch ~30–40% of issues — treat a clean pass as necessary, not sufficient.
 2. **Keyboard-only walk of each core flow.** Unplug the mouse. Can you reach and operate every control? Is focus always visible? Any keyboard traps? Does tab order match visual/reading order?
 3. **Focus management across state changes.** Open/close modals and menus — is focus moved in and restored out? On client-side route change, does focus land somewhere sensible (not lost to `<body>`)?
 4. **Screen-reader spot check** of one core flow (VoiceOver/NVDA): are controls announced with name+role+state? Do dynamic updates (toasts, validation, async results) announce via live regions?
@@ -55,7 +55,7 @@ question: On the real running DOM — keyboard, focus, ARIA, contrast, semantics
 ## Station record
 
 ```markdown
-### Station 2 — Accessibility as-shipped: <RED|YELLOW|GREEN> (<n>/10)
+### Station 2 — Accessibility: <RED|YELLOW|GREEN> (<n>/10)
 - Automated: <tool> on <n> routes → <n> violations · Keyboard walk: <flows covered> · SR spot check: <flow>
 - Evidence level: <live / recording / interview, per check>
 - Findings:

@@ -129,16 +129,18 @@ The 10 stations:
 
 | # | Station | The question it answers |
 |---|---|---|
-| 1 | Design-system fidelity | Is the product actually built with the system — correctly, as shipped — or has it drifted into one-off CSS and detached components? |
-| 2 | Accessibility as-shipped | On the real running DOM: keyboard, focus, ARIA, contrast, semantics — does it hold up where users are? |
-| 3 | Responsive & cross-device | Does it work across the breakpoints, input modes, and devices its audience actually uses? |
-| 4 | Interaction & state coverage | Are loading, empty, error, and success states designed and handled — or only the happy path? |
-| 5 | Performance as delivered | Load, latency, and payload weight on a real connection and device. |
+| 1 | Design system adoption | Is the product actually consuming the system — correctly, as shipped — or has it drifted into one-off CSS and detached components? |
+| 2 | Accessibility | On the real running DOM: keyboard, focus, ARIA, contrast, semantics — does it hold up where users are? |
+| 3 | Responsive | Does it work across the breakpoints, input modes, and devices its audience actually uses? |
+| 4 | States & resilience | Everything that isn't the happy path: loading/empty/error/success states designed, and graceful behavior under bad input, failures, and edge cases. |
+| 5 | Performance | Load, latency, and payload weight on a real connection and device. |
 | 6 | Content & information architecture | Labels, navigation, microcopy, findability — can people understand and get around? |
-| 7 | Task success & core flows | Can a real user complete the product's core jobs end to end? |
-| 8 | Visual craft & polish | Spacing, alignment, rhythm, consistency as rendered. |
-| 9 | Resilience & error handling | Bad input, failed requests, offline, edge cases — does it degrade gracefully and recover? |
-| 10 | Instrumentation & feedback | Can the team see how the product performs in the wild, and does that signal reach the backlog? |
+| 7 | Task & flow success | Can a real user complete the product's core jobs end to end? |
+| 8 | Visual design | Beyond tidy spacing: a cohesive design language — hierarchy, balance, brand distinctness — or merely assembled parts? |
+| 9 | Security & privacy | Auth, sessions, permissions, data exposure, and input handling as-shipped. |
+| 10 | Measurement | Can the team see how the product performs in the wild, and does that signal reach the backlog? |
+
+The inspection leans on proven open tooling as reference instruments — [Lighthouse CLI](https://github.com/GoogleChrome/lighthouse) for performance, axe-core/pa11y for accessibility, `npm audit` for dependencies — as exemplars, never hard requirements. Judgment-based stations share [NN/g's ten usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as a common vocabulary. And intake gathers the team's **stated intent** (decks, goals, brand references) so the inspection scores the shipped product against the product's *own* ideal, not just generic bars.
 
 Where a product symptom traces to the components themselves rather than how they were composed, that's a **design-system** finding — run `ds-inspection` and cross-reference. That's the tandem.
 

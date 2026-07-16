@@ -13,11 +13,15 @@ Where the companion `ds-inspection` skill inspects the *design system* a team bu
 
 1. **Evidence before judgment.** Every finding cites its evidence and carries a tag: `[verified]` — you directly saw it in the running product, the code, or a tool's output; `[reported]` — the human told you and you couldn't confirm. Never present a `[reported]` finding as fact. Never invent a finding to fill space.
 2. **Tool-agnostic evidence chain.** At each station, try in order: (a) **the running product** — a reachable instance you can load and drive (browser bridge, dev server, deployed URL); (b) **the code** — repo access to read source; (c) **exports & screenshots** the user pastes or attaches; (d) **interview** — ask the station's questions conversationally. Use whatever the user has; never require a specific vendor tool, and never refuse to proceed because one is missing — drop down the chain instead. Knowledge MCPs count as live evidence for benchmarking and standards lookups; cite them in `[verified]` findings.
-3. **Get the product running first — every run, every mode.** A product inspection is worthless if it's about the product as *described* or as *coded* instead of as *shipped*. At check-in: ask for a production/staging URL or local launch instructions, **then** check your own available tools for a browser bridge and make one real call to actually load and confirm you can see the live product. Record the outcome in `product-inspection/GARAGE.md`'s access map. Six of the ten stations (2 accessibility, 3 responsive, 4 state coverage, 5 performance, 8 visual craft, 9 resilience) can only produce `[verified]` findings against a running instance — skipping this probe silently downgrades most of the inspection to `[reported]`, and the user finds out at the end.
-4. **Scope claims to what you inspected.** "3 of the 12 screens I walked" — not "your product." Say what you did NOT inspect. Distinguish the product's *own UI* from the *content it produces or displays* (user data, generated output) — the latter is usually out of scope for craft findings.
-5. **Respect intentional deviations.** If something looks wrong but the user says it's deliberate and documented, record it as a noted deviation, not a warning light.
-6. **Scale the frame to the product.** A green for an internal tool or an early beta is different from a green for a flagship public product. Calibrate against the profile in `GARAGE.md`.
-7. **The human makes the calls.** You surface, score, and propose. Prioritization and judgment calls belong to the team.
+3. **Prefer proven open tooling — as exemplars, not requirements.** When a well-known open tool is available (or a one-line install away), reach for it before hand-rolling a check: [Lighthouse CLI](https://github.com/GoogleChrome/lighthouse) for performance and page-quality sweeps, axe-core / pa11y for accessibility, `npm audit` (or the ecosystem's equivalent) for dependency vulnerabilities. Station files name these as *reference* tools so findings are comparable across inspections — but any tool that produces the same evidence counts, and no station may hard-require a specific product. Name the tool and version in the finding so the check can be re-run.
+4. **Get the product running first — every run, every mode.** A product inspection is worthless if it's about the product as *described* or as *coded* instead of as *shipped*. At check-in: ask for a production/staging URL or local launch instructions, **then** check your own available tools for a browser bridge and make one real call to actually load and confirm you can see the live product. Record the outcome in `product-inspection/GARAGE.md`'s access map. Six of the ten stations (2 accessibility, 3 responsive, 4 states & resilience, 5 performance, 8 visual design, 9 security & privacy) can only produce `[verified]` findings against a running instance — skipping this probe silently downgrades most of the inspection to `[reported]`, and the user finds out at the end.
+5. **Inspect against the product's own ideal, not just generic bars.** Intake gathers the team's stated intent — the one-pager, the pitch deck, brand references, what success looks like (`GARAGE.md` → "Intent & ideal"). Stations calibrate against it: Station 7 scores the *product's own* core jobs, Station 8 scores against the *product's own* design language and brand ambition. Where shipped diverges from stated intent, that's a finding even when a generic bar is met. If no stated ideal exists, record that honestly and score against general quality bars alone — and note "no stated ideal" itself as a gap worth closing.
+6. **Scope claims to what you inspected.** "3 of the 12 screens I walked" — not "your product." Say what you did NOT inspect. Distinguish the product's *own UI* from the *content it produces or displays* (user data, generated output) — the latter is usually out of scope for craft findings.
+7. **Respect intentional deviations.** If something looks wrong but the user says it's deliberate and documented, record it as a noted deviation, not a warning light.
+8. **Scale the frame to the product.** A green for an internal tool or an early beta is different from a green for a flagship public product. Calibrate against the profile in `GARAGE.md`.
+9. **The human makes the calls.** You surface, score, and propose. Prioritization and judgment calls belong to the team.
+
+**Shared vocabulary for judgment findings:** the stations that lean on human judgment (4 states & resilience, 6 content & IA, 7 task & flow success, 8 visual design) draw on [Nielsen Norman Group's ten usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as a common lens. When a finding is judgment-based rather than tool-measured, cite the heuristic by name (e.g. "visibility of system status," "aesthetic and minimalist design") — it grounds the judgment in a shared, citable framework instead of taste.
 
 ## Files in this kit
 
@@ -30,7 +34,7 @@ Where the companion `ds-inspection` skill inspects the *design system* a team bu
 
 ```
 product-inspection/
-├── GARAGE.md                          ← product profile, evidence access map
+├── GARAGE.md                          ← product profile, evidence access map, intent & ideal
 ├── reports/YYYY-MM-DD-inspection.md
 └── work-orders/YYYY-MM-DD-work-order.md
 ```
@@ -41,18 +45,18 @@ This is a sibling of any `ds-inspection/` folder, so both inspections coexist in
 
 Ten stations, each self-contained in `stations/`:
 
-1. **Design-system fidelity** — is the product actually built with the design system, correctly, as shipped?
-2. **Accessibility as-shipped** — keyboard, focus, ARIA, contrast, semantics on the real DOM.
-3. **Responsive & cross-device** — works across the audience's real breakpoints, input modes, and devices.
-4. **Interaction & state coverage** — loading, empty, error, success states designed and handled.
-5. **Performance as delivered** — load, latency, and weight on a real connection and device.
+1. **Design system adoption** — is the product actually consuming the design system, correctly, as shipped — or drifting into one-off CSS and detached components?
+2. **Accessibility** — keyboard, focus, ARIA, contrast, semantics on the real DOM.
+3. **Responsive** — works across the audience's real breakpoints, input modes, and devices.
+4. **States & resilience** — everything that isn't the happy path: loading, empty, error, and success states deliberately designed, *and* graceful behavior under bad input, failed requests, offline, and edge-case data.
+5. **Performance** — load, latency, and weight on a real connection and device.
 6. **Content & information architecture** — labels, navigation, microcopy, findability.
-7. **Task success & core flows** — can a real user complete the core jobs end to end?
-8. **Visual craft & polish** — spacing, alignment, rhythm, consistency as rendered.
-9. **Resilience & error handling** — graceful degradation and recovery under stress.
-10. **Instrumentation & feedback** — can the team see the product in the wild, and does signal reach the backlog?
+7. **Task & flow success** — can a real user complete the core jobs end to end?
+8. **Visual design** — beyond tidy spacing: does the product have a cohesive design language — hierarchy, balance, brand distinctness — or does it merely look assembled?
+9. **Security & privacy** — auth, sessions, permissions, data exposure, and input handling as-shipped.
+10. **Measurement** — can the team see the product in the wild, and does signal reach the backlog?
 
-Run them in order — **Station 1 first**, because fidelity drift resurfaces visually and behaviorally in later stations, so fixing it early pays them down.
+Run them in order — **Station 1 first**, because adoption drift resurfaces visually and behaviorally in later stations, so fixing it early pays them down.
 
 ## Modes
 
@@ -60,16 +64,16 @@ Determine which mode the user wants; when ambiguous, ask one short question.
 
 ### Mode 1 — Full inspection
 
-1. **Check in.** If `product-inspection/GARAGE.md` exists, read it and confirm it's current ("Anything changed since <date>?"). If not, run `intake/PRODUCT-INTAKE.md` first. Either way, **get the product running** (ground rule 3).
+1. **Check in.** If `product-inspection/GARAGE.md` exists, read it and confirm it's current ("Anything changed since <date>?"). If not, run `intake/PRODUCT-INTAKE.md` first. Either way, **get the product running** (ground rule 4).
 2. **Announce the plan.** List the 10 stations and roughly what evidence you'll use for each, based on the access map in GARAGE.md. Give the user a chance to narrow scope.
 3. **Run stations 1 → 10 in order.** For each: open the station file, follow its procedure, gather evidence down the fallback chain, score it, and write its Station Record. Between stations, give a one-line status ("Station 3: yellow — reflows to mobile, but a hover-only menu locks out touch. Moving to station 4.").
 4. **Write the report** from `templates/inspection-report.md` into `product-inspection/reports/`. Compute the /100 score. Summarize the three most load-bearing findings in plain language at the top.
 5. **Write the work order** from `templates/work-order.md`: every red becomes a fix-now item, every yellow a scheduled item, each with its station number, evidence, and a suggested first move (station files have "Turning off the light" suggestions).
-6. **Recommend a cadence.** Deep inspection each release or quarter; stations worth wiring into CI now (a11y, performance, fidelity lint).
+6. **Recommend a cadence.** Deep inspection each release or quarter; stations worth wiring into CI now (a11y, performance, adoption lint, dependency audit).
 
 ### Mode 2 — Single station (ad hoc)
 
-Run intake-lite if no GARAGE.md exists (just the profile questions relevant to that station — and always the running-instance probe from ground rule 3). Open the station file, run it, score it. Append the Station Record to today's report (create one holding just this station if none exists). Offer the natural next station but don't push.
+Run intake-lite if no GARAGE.md exists (just the profile questions relevant to that station — and always the running-instance probe from ground rule 4). Open the station file, run it, score it. Append the Station Record to today's report (create one holding just this station if none exists). Offer the natural next station but don't push.
 
 ### Mode 3 — Re-inspection
 

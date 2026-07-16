@@ -1,13 +1,13 @@
 ---
 station: 1
-name: Design-system fidelity
-quality: Faithful (quality 1 of 10)
-question: Is the product actually built with the design system — correctly, as shipped — or has it drifted into one-off CSS, hardcoded values, and detached components?
+name: Design system adoption
+quality: Adopted (quality 1 of 10)
+question: Is the product actually consuming the design system — correctly, as shipped — or has it drifted into one-off CSS, hardcoded values, and detached components?
 ---
 
-# Station 1 — Design-system fidelity
+# Station 1 — Design system adoption
 
-**Quality: Faithful.** The design system is only worth what products actually consume. This station measures the gap between the system as designed and the product as shipped — the divergence that erodes consistency, doubles maintenance, and quietly reintroduces every bug the system was meant to solve. This is the natural bridge to a paired `ds-inspection` run: that one grades the system; this one grades whether this product honored it.
+**Quality: Adopted.** A design system is only worth what products actually consume — *adoption* is the word the design-system community uses for exactly this, and it's what this station measures: the gap between the system as published and the product as shipped. Low or drifting adoption erodes consistency, doubles maintenance, and quietly reintroduces every bug the system was meant to solve. This is the natural bridge to a paired `ds-inspection` run: that one grades the system (including its own adoption/coverage view from the system side); this one grades whether this product adopted it.
 
 ## Evidence to gather
 
@@ -38,7 +38,7 @@ question: Is the product actually built with the design system — correctly, as
 ## Scoring anchors
 
 - **Red (0–3):** The product mostly reimplements the system — bespoke components, hardcoded values throughout, or the system barely imported.
-- **Yellow (4–7):** Real usage with meaningful drift — a chunk of one-off CSS, some hardcoded values, a version well behind, a few detached components.
+- **Yellow (4–7):** Real adoption with meaningful drift — a chunk of one-off CSS, some hardcoded values, a version well behind, a few detached components.
 - **Green (8–10):** The team can honestly say: *"What renders is the system — components consumed as published, styling resolved from tokens, near-zero app-level component CSS, version current."*
 
 ## Turning off the light
@@ -50,7 +50,7 @@ question: Is the product actually built with the design system — correctly, as
 ## Station record
 
 ```markdown
-### Station 1 — Design-system fidelity: <RED|YELLOW|GREEN> (<n>/10)
+### Station 1 — Design system adoption: <RED|YELLOW|GREEN> (<n>/10)
 - Sampled: <n> components / <n> screens · System version: <in product> vs <latest>
 - Evidence level: <live / screenshot / interview, per asset>
 - Findings:
