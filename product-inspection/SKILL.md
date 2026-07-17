@@ -54,7 +54,7 @@ Ten stations, each self-contained in `stations/`:
 7. **Performance** — load, latency, and weight on a real connection and device.
 8. **Security & privacy** — auth, sessions, permissions, data exposure, dependency vulnerabilities, and input handling as-shipped.
 9. **Testing & validation** — a real suite covering the core flows, running in CI as a gate (and the inspection's own automatable checks wired in), so quality holds as the product changes.
-10. **Measurement** — can the team see the product in the wild, and does signal reach the backlog?
+10. **Measurement & feedback** — can the team see the product in the wild, and does that signal feed back into the backlog and *up* into the design system?
 
 The order rhymes with `ds-inspection` (Adoption→Best practices→Accessibility mirrors its Coverage→Best practices→Accessibility). Run them in order — **Station 1 first**, because adoption drift resurfaces in every later station, so fixing it early pays them down.
 

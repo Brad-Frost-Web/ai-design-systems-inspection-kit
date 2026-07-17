@@ -138,7 +138,7 @@ The 10 stations:
 | 7 | Performance | Load, latency, and payload weight on a real connection and device. |
 | 8 | Security & privacy | Auth, sessions, permissions, data exposure, dependency vulnerabilities, and input handling as-shipped. |
 | 9 | Testing & validation | A real suite covering the core flows, running in CI as a gate (and the inspection's own automatable checks wired in), so quality holds as the product changes. |
-| 10 | Measurement | Can the team see how the product performs in the wild, and does that signal reach the backlog? |
+| 10 | Measurement & feedback | Can the team see how the product performs in the wild, and does that signal feed back into the backlog and up into the design system? |
 
 The inspection leans on proven open tooling as reference instruments — [Lighthouse CLI](https://github.com/GoogleChrome/lighthouse) for performance, axe-core/pa11y for accessibility, `npm audit` for dependencies — as exemplars, never hard requirements. Judgment-based stations share [NN/g's ten usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as a common vocabulary. And intake gathers the team's **stated intent** (decks, goals, brand references) so the inspection scores the shipped product against the product's *own* ideal, not just generic bars.
 

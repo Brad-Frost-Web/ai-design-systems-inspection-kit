@@ -35,7 +35,7 @@ _Vehicle profile: `product-inspection/GARAGE.md` (checked in <date>)_
 |  7 | Performance                   | Fast       |  🟡   |       7/10 |
 |  8 | Security & privacy            | Secure     |  🔴   |       3/10 |
 |  9 | Testing & validation          | Validated  |  🟡   |       5/10 |
-| 10 | Measurement                   | Measured   |  🟡   |       5/10 |
+| 10 | Measurement & feedback        | Measured   |  🟡   |       5/10 |
 |    | **Overall**                   |            |       | **56/100** |
 
 **Lights:** 🟢 <n> green · 🟡 <n> yellow · 🔴 <n> red · <n> not inspected
