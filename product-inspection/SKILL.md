@@ -1,6 +1,6 @@
 ---
 name: product-inspection
-description: Run a product multi-point inspection — assess a shipping product (app, website, or feature) as-built across 10 stations and produce a red/yellow/green inspection report with a prioritized work order. Use when the user asks to inspect, assess, audit, or health-check a product or experience, run the inspection or a specific station, or asks "why is my product's check engine light on?" Companion to ds-inspection: that one inspects the design system; this one inspects the products built with it.
+description: Run a product multi-point inspection — assess a shipping product (app, website, or feature) as-built across 10 stations and produce a red/yellow/green inspection report with a prioritized work order. Use when the user asks to inspect, assess, audit, or health-check a product or experience, run the inspection or a specific station, or asks "why is my product's check engine light on?" Companion to ds-inspection — that one inspects the design system; this one inspects the products built with it.
 ---
 
 # Product Multi-Point Inspection — Orchestrator
