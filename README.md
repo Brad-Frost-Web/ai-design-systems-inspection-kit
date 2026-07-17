@@ -130,14 +130,14 @@ The 10 stations:
 | # | Station | The question it answers |
 |---|---|---|
 | 1 | Design system adoption | Is the product actually consuming the system — correctly, as shipped — or has it drifted into one-off CSS and detached components? |
-| 2 | Accessibility | On the real running DOM: keyboard, focus, ARIA, contrast, semantics — does it hold up where users are? |
-| 3 | Responsive | Does it work across the breakpoints, input modes, and devices its audience actually uses? |
-| 4 | States & resilience | Everything that isn't the happy path: loading/empty/error/success states designed, and graceful behavior under bad input, failures, and edge cases. |
-| 5 | Performance | Load, latency, and payload weight on a real connection and device. |
-| 6 | Content & information architecture | Labels, navigation, microcopy, findability — can people understand and get around? |
-| 7 | Task & flow success | Can a real user complete the product's core jobs end to end? |
-| 8 | Visual design | Beyond tidy spacing: a cohesive design language — hierarchy, balance, brand distinctness — or merely assembled parts? |
-| 9 | Security & privacy | Auth, sessions, permissions, data exposure, and input handling as-shipped. |
+| 2 | Best practices | The Lighthouse-style catch-all: responsive across devices, deliberate loading/empty/error/success states, graceful failure under stress, clean web-platform hygiene. |
+| 3 | Accessibility | On the real running DOM: keyboard, focus, ARIA, contrast, semantics — does it hold up where users are? |
+| 4 | Content & information architecture | Labels, navigation, microcopy, findability — can people understand and get around? |
+| 5 | Usability | Can a real user complete the product's core jobs end to end, without getting stuck or dropped? |
+| 6 | Visual design | Beyond tidy spacing: a cohesive design language — hierarchy, balance, brand distinctness — or merely assembled parts? |
+| 7 | Performance | Load, latency, and payload weight on a real connection and device. |
+| 8 | Security & privacy | Auth, sessions, permissions, data exposure, dependency vulnerabilities, and input handling as-shipped. |
+| 9 | Testing & validation | A real suite covering the core flows, running in CI as a gate (and the inspection's own automatable checks wired in), so quality holds as the product changes. |
 | 10 | Measurement | Can the team see how the product performs in the wild, and does that signal reach the backlog? |
 
 The inspection leans on proven open tooling as reference instruments — [Lighthouse CLI](https://github.com/GoogleChrome/lighthouse) for performance, axe-core/pa11y for accessibility, `npm audit` for dependencies — as exemplars, never hard requirements. Judgment-based stations share [NN/g's ten usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as a common vocabulary. And intake gathers the team's **stated intent** (decks, goals, brand references) so the inspection scores the shipped product against the product's *own* ideal, not just generic bars.

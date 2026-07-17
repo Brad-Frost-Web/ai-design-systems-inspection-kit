@@ -27,16 +27,16 @@ _Vehicle profile: `product-inspection/GARAGE.md` (checked in <date>)_
 |  # | Station                       | Quality    | Light |      Score |
 |---:|:------------------------------|:-----------|:-----:|-----------:|
 |  1 | Design system adoption        | Adopted    |  🟡   |       6/10 |
-|  2 | Accessibility                 | Accessible |  🟡   |       6/10 |
-|  3 | Responsive                    | Adaptive   |  🟢   |       8/10 |
-|  4 | States & resilience           | Resilient  |  🟡   |       5/10 |
-|  5 | Performance                   | Fast       |  🟡   |       7/10 |
-|  6 | Content & IA                   | Clear      |  🟢   |       8/10 |
-|  7 | Task & flow success           | Effective  |  🟢   |       8/10 |
-|  8 | Visual design                 | Refined    |  🟡   |       7/10 |
-|  9 | Security & privacy            | Secure     |  🔴   |       3/10 |
+|  2 | Best practices                | Sound      |  🟡   |       6/10 |
+|  3 | Accessibility                 | Accessible |  🟡   |       6/10 |
+|  4 | Content & IA                  | Clear      |  🟢   |       8/10 |
+|  5 | Usability                     | Usable     |  🟢   |       8/10 |
+|  6 | Visual design                 | Refined    |  🟡   |       7/10 |
+|  7 | Performance                   | Fast       |  🟡   |       7/10 |
+|  8 | Security & privacy            | Secure     |  🔴   |       3/10 |
+|  9 | Testing & validation          | Validated  |  🟡   |       5/10 |
 | 10 | Measurement                   | Measured   |  🟡   |       5/10 |
-|    | **Overall**                   |            |       | **63/100** |
+|    | **Overall**                   |            |       | **56/100** |
 
 **Lights:** 🟢 <n> green · 🟡 <n> yellow · 🔴 <n> red · <n> not inspected
 

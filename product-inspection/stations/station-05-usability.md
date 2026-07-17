@@ -1,13 +1,13 @@
 ---
-station: 7
-name: Task & flow success
-quality: Effective (quality 7 of 10)
+station: 5
+name: Usability
+quality: Usable (quality 5 of 10)
 question: Can a real user actually complete the product's core jobs, end to end, without getting stuck, confused, or dropped?
 ---
 
-# Station 7 — Task & flow success
+# Station 5 — Usability
 
-**Quality: Effective.** Every prior station inspects an attribute — adoption, a11y, speed, clarity. This one inspects the *whole*: put yourself in the user's shoes and try to accomplish what they came to do, start to finish. A product can pass every component-level check and still fail here because the *flow* is broken — a dead end, a missing step, a confirmation that never comes, a path that assumes knowledge the user doesn't have. This is the station that most resembles a lightweight usability test, and it leans hardest on [NN/g's usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as its judgment vocabulary — "user control and freedom," "error prevention," "flexibility and efficiency of use." Cite the heuristic by name when a finding is judgment-based.
+**Quality: Usable.** Every prior station inspects an attribute — adoption, best practices, a11y, clarity. This one inspects the *whole*: put yourself in the user's shoes and try to accomplish what they came to do, start to finish. A product can pass every component-level check and still fail here because the *flow* is broken — a dead end, a missing step, a confirmation that never comes, a path that assumes knowledge the user doesn't have. This is the station that most resembles a lightweight usability test, and it leans hardest on [NN/g's usability heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) as its judgment vocabulary — "user control and freedom," "error prevention," "flexibility and efficiency of use." Cite the heuristic by name when a finding is judgment-based.
 
 **Calibrate against the product's own intent.** The core jobs come from `GARAGE.md` → "Intent & ideal" — the team's stated purpose, not your inference. Score the product against what *it* says it exists to do; where the shipped flow diverges from the stated goal, that's a finding even if the flow technically completes.
 
@@ -57,7 +57,7 @@ question: Can a real user actually complete the product's core jobs, end to end,
 ## Station record
 
 ```markdown
-### Station 7 — Task & flow success: <RED|YELLOW|GREEN> (<n>/10)
+### Station 5 — Usability: <RED|YELLOW|GREEN> (<n>/10)
 - Core jobs tested: <list> · Completed end-to-end: <n/n> · Worst friction: <where>
 - Evidence level: <live / recording / analytics / interview, per job>
 - Findings:

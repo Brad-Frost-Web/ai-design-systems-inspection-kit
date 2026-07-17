@@ -1,11 +1,11 @@
 ---
-station: 9
+station: 8
 name: Security & privacy
-quality: Secure (quality 9 of 10)
+quality: Secure (quality 8 of 10)
 question: As shipped, does the product protect its users' sessions and data — auth, permissions, exposure, transport, dependencies — or does it trust the client, leak internals, and hope?
 ---
 
-# Station 9 — Security & privacy
+# Station 8 — Security & privacy
 
 **Quality: Secure.** Users hand a product their sessions, their data, and their trust; this station checks whether the shipped product deserves it. Not a penetration test — a *health inspection*: are the well-known doors locked? Sessions that expire and log out cleanly, permissions enforced on the server (not just hidden in the UI), APIs that return only what the page needs, errors that don't narrate the stack, dependencies without known holes, and no more tracking or data collection than the product can justify. Most product security failures aren't exotic — they're the basics skipped under deadline. This inspection is for the product's own team, on their own product; anything deeper (real pentesting, adversarial testing of third-party services) is out of scope and needs explicit authorization.
 
@@ -60,7 +60,7 @@ question: As shipped, does the product protect its users' sessions and data — 
 ## Station record
 
 ```markdown
-### Station 9 — Security & privacy: <RED|YELLOW|GREEN> (<n>/10)
+### Station 8 — Security & privacy: <RED|YELLOW|GREEN> (<n>/10)
 - Checked: <auth/session · authorization · exposure · transport · input · deps · privacy> · Audit tool: <tool + version> · Worst finding: <what>
 - Evidence level: <live / code / interview, per check>
 - Findings:

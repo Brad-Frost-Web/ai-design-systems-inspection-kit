@@ -1,11 +1,11 @@
 ---
-station: 8
+station: 6
 name: Visual design
-quality: Refined (quality 8 of 10)
+quality: Refined (quality 6 of 10)
 question: As rendered, does the product look designed — a cohesive design language with real hierarchy, balance, and brand distinctness — or does it merely look assembled from correct parts?
 ---
 
-# Station 8 — Visual design
+# Station 6 — Visual design
 
 **Quality: Refined.** This station judges the whole visual result, on two levels. The **craft** level: consistent spacing rhythm, true alignment, deliberate type scale — users don't consciously notice good spacing, but they absolutely feel bad spacing. And the **design-language** level: brand expression, distinctness, balance, contrast, art direction — whether the assembled product feels *designed* or merely *assembled*. A design system guarantees consistent parts; it does not guarantee a designed whole. A product can use every component correctly and still read as an undifferentiated spray of stacked text and cards — technically clean, visually anonymous, no point of view. Something that feels refined and intentional scores higher than something that feels disjointed, incomplete, or generic, even when both are "correct."
 
@@ -68,7 +68,7 @@ It's distinct from adoption (are the right parts used?) and clarity (do the word
 ## Station record
 
 ```markdown
-### Station 8 — Visual design: <RED|YELLOW|GREEN> (<n>/10)
+### Station 6 — Visual design: <RED|YELLOW|GREEN> (<n>/10)
 - Pages reviewed: <n> · Craft (spacing/alignment/consistency): <summary> · Design language (hierarchy/distinctness/composition): <summary> · Ideal compared: <stated ideal or "none provided"> · Themes checked: <list>
 - Evidence level: <live / screenshot / interview, per check>
 - Findings:

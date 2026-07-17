@@ -1,11 +1,11 @@
 ---
-station: 5
+station: 7
 name: Performance
-quality: Fast (quality 5 of 10)
+quality: Fast (quality 7 of 10)
 question: On a real connection and device, does the product load and respond fast enough that users don't feel it — or is it heavy, janky, and slow where it counts?
 ---
 
-# Station 5 — Performance
+# Station 7 — Performance
 
 **Quality: Fast.** Performance is a feature users feel before any other. This station measures the product as delivered — not the dev build on localhost with a warm cache, but payload weight, load milestones, and interaction latency approximating what a real user on a mid-tier device and ordinary network gets. The goal isn't a vanity score; it's whether the core flows feel immediate.
 
@@ -54,7 +54,7 @@ question: On a real connection and device, does the product load and respond fas
 ## Station record
 
 ```markdown
-### Station 5 — Performance: <RED|YELLOW|GREEN> (<n>/10)
+### Station 7 — Performance: <RED|YELLOW|GREEN> (<n>/10)
 - Conditions: <tool + version, build type, throttling> · Milestones: <load metrics> · Weight: <bytes/route> · Worst interaction: <trace>
 - Evidence level: <live / report / build / interview, per check>
 - Findings:

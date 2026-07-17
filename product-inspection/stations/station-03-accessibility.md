@@ -1,11 +1,11 @@
 ---
-station: 2
+station: 3
 name: Accessibility
-quality: Accessible (quality 2 of 10)
+quality: Accessible (quality 3 of 10)
 question: On the real running DOM — keyboard, focus, ARIA, contrast, semantics — does the product hold up where actual users are, not just where the design system promised it would?
 ---
 
-# Station 2 — Accessibility
+# Station 3 — Accessibility
 
 **Quality: Accessible.** A design system can ship perfectly accessible components and a product can still be unusable — because accessibility lives in *composition* and *content*: reading order, focus management across route changes, form labels wired to the right inputs, live-region announcements, contrast against the actual backgrounds in play. This station checks the product as a screen-reader and keyboard user meet it, not as the component library intends. If a paired `ds-inspection` graded the system's a11y green, that's the floor — this asks whether the product kept it.
 
@@ -55,7 +55,7 @@ question: On the real running DOM — keyboard, focus, ARIA, contrast, semantics
 ## Station record
 
 ```markdown
-### Station 2 — Accessibility: <RED|YELLOW|GREEN> (<n>/10)
+### Station 3 — Accessibility: <RED|YELLOW|GREEN> (<n>/10)
 - Automated: <tool> on <n> routes → <n> violations · Keyboard walk: <flows covered> · SR spot check: <flow>
 - Evidence level: <live / recording / interview, per check>
 - Findings:

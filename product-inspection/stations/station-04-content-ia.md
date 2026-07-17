@@ -1,11 +1,11 @@
 ---
-station: 6
+station: 4
 name: Content & information architecture
-quality: Clear (quality 6 of 10)
+quality: Clear (quality 4 of 10)
 question: Can people understand the words, find what they need, and know where they are — or do labels, navigation, and structure get in the way?
 ---
 
-# Station 6 — Content & information architecture
+# Station 4 — Content & information architecture
 
 **Quality: Clear.** The most beautiful, fast, accessible product still fails if users can't understand the labels or find the thing they came for. This station inspects the product as a reader and wayfinder: is the language plain and consistent, is navigation learnable, is content structured so it's scannable, and does the product always answer "where am I and where can I go?" It's the layer design systems rarely cover — components are correct, but the *words and structure* are the product team's. (NN/g lens: "match between the system and the real world," "consistency and standards," "recognition rather than recall" — cite these by name on judgment findings.)
 
@@ -53,7 +53,7 @@ question: Can people understand the words, find what they need, and know where t
 ## Station record
 
 ```markdown
-### Station 6 — Content & information architecture: <RED|YELLOW|GREEN> (<n>/10)
+### Station 4 — Content & information architecture: <RED|YELLOW|GREEN> (<n>/10)
 - IA depth/shape: <summary> · Label consistency: <findings> · Microcopy quality: <summary>
 - Evidence level: <live / screenshot / interview, per check>
 - Findings:
